@@ -1,65 +1,35 @@
-// import logo from './logo.svg';
-import morseIcon from "./assets/morse-code-1.png"
 import './App.css';
 
+// browser router components
 import {
-  Box,
-  Image,
-  Text,
-} from "@chakra-ui/react";
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
-import {
-  GiHamburgerMenu,
-} from "react-icons/gi"
+// pages
+import Home from "./pages/Home/Home.js"
+import Study from "./pages/Study/Study.js"
+import Test from "./pages/Test/Test.js"
 
-import {
-  Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  useDisclosure,
-  IconButton,
-  Button
-} from "@chakra-ui/react"
-
-// import DrawerComponent from './components/drawer/DrawerComponent.js';
+// drawer and banner
+import DrawerComponent from './components/drawer/DrawerComponent.js'
 
 function App() {
 
-  const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-    <Box w="100%" bg="rgba(77, 87, 140, 255)" display="flex" alignItems="center">
-      <IconButton icon={<GiHamburgerMenu />} bg="rgba(77, 87, 140, 255)" marginLeft="5px" size="lg" onClick={onOpen} />
-      <Box w="80%" h="15vh" display="flex" justifyContent="center" alignItems="center" flexDir="row">
-        <Drawer placement="left" onClose={onClose} size="xs" isOpen={isOpen}>
-          <DrawerOverlay>
-            <DrawerContent>
-              <DrawerHeader>
-                Learn Morse Code
-                      </DrawerHeader>
-              <DrawerBody>
-                <Box display="flex" flexDir="column" justifyContent="space-evenly" h="25vh">
-                  <Button>Home</Button>
-                  <Button>Learn</Button>
-                  <Button>Test Yourself</Button>
-                </Box>
-              </DrawerBody>
-              <DrawerFooter>
-                Gines, Kevin A.
-              </DrawerFooter>
-            </DrawerContent>
-          </DrawerOverlay>
-        </Drawer>
+    <Router>
+      <div>
+        <DrawerComponent />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/study" exact component={Study} />
+          <Route path="/test" exact component={Test} />
+        </Switch>
+      </div>
+    </Router>
 
-        <a href="/">
-          <Image src={morseIcon} alt="Morse Code Icon" boxSize="100px" objectFit="cover" justifyContent="center" />
-        </a>
-        <Text paddingLeft="5" fontFamily="Montserrat" fontWeight="extrabold">Learn Morse Code</Text>
-      </Box>
-    </Box>
   );
 }
 
