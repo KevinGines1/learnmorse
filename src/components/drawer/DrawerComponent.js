@@ -4,6 +4,7 @@ import {
     GiHamburgerMenu,
 } from "react-icons/gi"
 
+
 // other chakra UI components
 import {
     Box,
@@ -35,7 +36,7 @@ function DrawerComponent() {
     return (
         <Box w="100%" bg="rgba(77, 87, 140, 255)" display="flex" alignItems="center">
             <IconButton icon={<GiHamburgerMenu />} bg="rgba(77, 87, 140, 255)" marginLeft="5px" size="lg" onClick={onOpen} />
-            <Box w="80%" h="15vh" display="flex" justifyContent="center" alignItems="center" flexDir="row">
+            <Box w="95%" h="15vh" display="flex" justifyContent="center" alignItems="center" flexDir="row">
                 <Drawer placement="left" onClose={onClose} size="xs" isOpen={isOpen}>
                     <DrawerOverlay>
                         <DrawerContent>
