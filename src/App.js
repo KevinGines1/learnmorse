@@ -12,8 +12,9 @@ import Home from "./pages/Home/Home.js"
 import Study from "./pages/Study/Study.js"
 import Test from "./pages/Test/Test.js"
 
-// drawer and banner
+// drawer & banner, footer
 import DrawerComponent from './components/drawer/DrawerComponent.js'
+import Footer from './components/footer/Footer.js'
 
 function App() {
 
@@ -23,11 +24,12 @@ function App() {
       <div>
         <DrawerComponent />
         <Switch>
-          <Route path="/" exact component={Home} />
           <Route path="/study" exact component={Study} />
           <Route path="/test" exact component={Test} />
+          <Route path="/" exact component={Home} />
         </Switch>
       </div>
+      <Footer />
     </Router>
 
   );
