@@ -13,6 +13,7 @@ import {
 
 //important ones
 import CardHolder from "../../components/CardsHolder/CardsHolder.js"
+import Interactable from "../../components/InteractableCardHolder/Interactable.js"
 
 function Study() {
 
@@ -59,6 +60,7 @@ function Study() {
 
     ]
 
+
     return (
         <Box w="100%">
             <Tabs align="center">
@@ -68,8 +70,7 @@ function Study() {
                 </TabList>
 
                 <TabPanels>
-                    {/* <TabPanel><Card symbol={symbol} /></TabPanel> */}
-                    <TabPanel>Display one by one</TabPanel>
+                    <TabPanel><Interactable symbol={symbol1} index="0" /></TabPanel>
                     <TabPanel><CardHolder symbol={symbol1} /></TabPanel>
                 </TabPanels>
             </Tabs>
