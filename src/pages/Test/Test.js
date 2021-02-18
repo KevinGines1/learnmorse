@@ -93,6 +93,7 @@ function Test() {
             setTimeout(function () { setAnswerStatus(false) }, 1000)
             // setAnswerStatus(false)
         }
+        //eslint-disable-next-line
     }, [input, index, isCorrect])
 
     return (
