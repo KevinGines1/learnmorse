@@ -20,7 +20,7 @@ function App() {
 
 
   return (
-    <Router>
+    <Router basename="localhost:3000">
       <div>
         <DrawerComponent />
         <Switch>

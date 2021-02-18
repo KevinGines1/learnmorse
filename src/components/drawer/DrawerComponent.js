@@ -53,7 +53,7 @@ function DrawerComponent() {
                                     </Button>
                                     <Button>
                                         <Link to="/study">
-                                            Learn
+                                            Study
                                         </Link>
                                     </Button>
                                     <Button>
