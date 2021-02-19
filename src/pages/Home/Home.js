@@ -31,7 +31,8 @@ function Home() {
             <Box w="70%" h="70vh" display="flex" flexDir="column" justifyContent="center" alignItems="center">
                 <Heading align="center" fontFamily="Fira Sans" fontSize={{ base: "6xl", md: null, lg: "8xl" }}>The Morse Code</Heading>
                 <Box w="100%">
-                    <Text margin="10px" fontFamily="Montserrat" fontWeight="bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo, tortor ut consectetur consectetur, metus magna vestibulum tortor, consectetur egestas libero ante et mauris.</Text>
+                    {/* <Text margin="10px" fontFamily="Montserrat" fontWeight="bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo, tortor ut consectetur consectetur, metus magna vestibulum tortor, consectetur egestas libero ante et mauris.</Text> */}
+                    <Text margin="10px" fontFamily="Montserrat" fontWeight="bold">is a method used in telecommunication to encode text characters as standardized sequences of two different signal durations, called dots and dashes or dits and dahs. Morse code is named after Samuel Morse, an inventor of the telegraph. (source: Wikipedia)</Text>
                 </Box>
                 <Button margin="10px" leftIcon={<CgNotes />} w={{ base: "80%", md: null, lg: "20%" }}><Link to="/study">Start Learning</Link></Button>
             </Box>
