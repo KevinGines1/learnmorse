@@ -14,7 +14,6 @@ import Test from "./pages/Test/Test.js"
 
 // drawer & banner, footer
 import DrawerComponent from './components/drawer/DrawerComponent.js'
-import Footer from './components/footer/Footer.js'
 
 function App() {
 
