@@ -20,7 +20,7 @@ function App() {
 
 
   return (
-    <Router basename="localhost:3000">
+    <Router>
       <div>
         <DrawerComponent />
         <Switch>
@@ -29,7 +29,7 @@ function App() {
           <Route path="/" exact component={Home} />
         </Switch>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
 
   );
